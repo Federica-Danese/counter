@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+:root {
+    --bg-color: #047F84;
+    --main-color: #F2BF02;
+    --second-main-color: #F2F2F2;
+    --text-color: #635957;
+    --h1-font: 3rem;
+    --text-font: 1.7rem;
+}
+ 
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-color);
+}
+
+.container{
+    display: flex;
+    width: 500px;
+    padding: 50px 0;
+    border-radius: 8px;
+    background: var(--second-main-color);
+    box-shadow: 10px 5px 40px var(--main-color);
+    border: 2px solid var(--main-color);
+    row-gap: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text h1{
+    font-size: var(--h1-font);
+    color: var(--text-color);
+}
+
+#circularProgress{
+    position: relative;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background: conic-gradient(#F2BF02 3.6deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#circularProgress::before{
+    content: "";
+    position: absolute;
+    height: 210px;
+    width: 210px;
+    border-radius: 50%;
+    background-color: var(--second-main-color);
+}
+
+#progressValue{
+   position: relative;
+   font-size: 5.5rem;
+   font-weight: 500;
+   color: var(--main-color);
+}
+
+#buttons{
+    flex-direction: row;
+}
+
+button{
+    color: var(--main-color);
+    font-size: var(--text-font);
+    font-weight: 500;
+    border: 3px solid var(--main-color);
+    border-radius: 15px;
+    padding: 18px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover{
+    background: var(--main-color);
+    color: var(--second-main-color);
+    border: 3px solid var(--text-color);
+}
+
+#resetBtn{
+    background: var(--text-color);
+    color: var(--second-main-color);
+    border: 3px solid var(--text-color);
+}
+
+#resetBtn:hover{
+    background: var(--second-main-color);
+    color: var(--text-color);
+    border: 3px solid var(--main-color);
+}
